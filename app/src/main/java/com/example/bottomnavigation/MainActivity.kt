@@ -1,5 +1,6 @@
 package com.example.bottomnavigation
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -22,16 +23,24 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
 
-        val navController = findNavController(R.id.navHostFragment)
-        val appBarConfiguration = AppBarConfiguration(
-            setOf(
-                R.id.personInfoFragment,
-                R.id.notesFragment,
-                R.id.weatherFragment
-            )
-        )
-        setupActionBarWithNavController(navController, appBarConfiguration)
-        binding.bottomNavigationView.setupWithNavController(navController)
+        binding.logoImageView.alpha = 0.0f
+        binding.logoImageView.animate().apply {
+            alpha(1.0f)
+            duration = 1000
+        }
 
+        binding.startBTN.translationX = -2000f
+        binding.startBTN.animate().apply {
+            translationX(0f)
+            duration = 1000
+            startDelay = 1000
+        }
+
+        binding.startBTN.setOnClickListener {
+            startActivity(Intent(this, StartActivity::class.java))
+            finish()
+        }
     }
+
+
 }
