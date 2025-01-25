@@ -3,29 +3,31 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/personInfoFragment">
+    app:startDestination="@+id/personInfoFragment">
 
     <fragment
         android:id="@+id/personInfoFragment"
         android:name="com.example.bottomnavigation.ui.person.PersonInfoFragment"
-        android:label="fragment_person_info"
+        android:label="Person"
         tools:layout="@layout/fragment_person_info" >
         <action
             android:id="@+id/action_personInfoFragment_to_notesFragment"
             app:destination="@id/notesFragment" />
     </fragment>
+
     <fragment
         android:id="@+id/notesFragment"
         android:name="com.example.bottomnavigation.ui.note.NotesFragment"
-        android:label="fragment_notes"
+        android:label="Note"
         tools:layout="@layout/fragment_notes" >
         <action
             android:id="@+id/action_notesFragment_to_weatherFragment"
             app:destination="@id/weatherFragment" />
     </fragment>
+
     <fragment
         android:id="@+id/weatherFragment"
         android:name="com.example.bottomnavigation.ui.weather.WeatherFragment"
-        android:label="fragment_weather"
+        android:label="Weather"
         tools:layout="@layout/fragment_weather" />
 </navigation>

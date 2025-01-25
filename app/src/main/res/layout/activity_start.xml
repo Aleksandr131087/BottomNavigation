@@ -25,6 +25,6 @@ tools:context=".MainActivity">
     android:layout_height="wrap_content"
     app:defaultNavHost = "true"
     app:navGraph="@navigation/nav_graph"
-    />
+    tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

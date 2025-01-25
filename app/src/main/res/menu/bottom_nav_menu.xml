@@ -2,17 +2,17 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/PersonFragment"
+        android:id="@+id/personInfoFragment"
         android:icon="@drawable/baseline_person_24"
         android:title="Личные данные"/>
 
     <item
-        android:id="@+id/NoteFragment"
+        android:id="@+id/notesFragment"
         android:icon="@drawable/baseline_notes_24"
         android:title="Заметки"/>
 
     <item
-        android:id="@+id/WeatherFragment"
+        android:id="@+id/weatherFragment"
         android:icon="@drawable/baseline_weather_24"
         android:title="Погода"/>
 

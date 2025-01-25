@@ -35,13 +35,12 @@ android {
         jvmTarget = "1.8"
     }
 
-    buildFeatures{
+    buildFeatures {
         viewBinding = true
     }
 }
 
 dependencies {
-
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
@@ -55,10 +54,36 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 
-    implementation ("androidx.navigation:navigation-fragment-ktx:2.8.5")
-    implementation ("androidx.navigation:navigation-ui-ktx:2.8.5")
+    // fragments
+    implementation("androidx.navigation:navigation-fragment-ktx:2.8.3")
+    implementation("androidx.navigation:navigation-ui-ktx:2.8.3")
 
-    implementation ("androidx.navigation:navigation-dynamic-features-fragment:2.8.5")
+    // retrofit
+    implementation ("com.squareup.retrofit2:retrofit:2.11.0")
+    implementation ("com.squareup.retrofit2:converter-gson:2.11.0")
 
-    implementation ("androidx.navigation:navigation-testing:2.8.5")
+    // coroutine
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.9.0")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.9.0")
+
+    // picasso
+    implementation("com.squareup.picasso:picasso:2.71828")
+
+    //location
+    implementation("com.google.android.gms:play-services-location:21.3.0")
+
+    // json to kotlin parsing
+    implementation("com.sealwu.jsontokotlin:library:3.7.4")
+
+    // lifecycle android
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.8.6")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.6")
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.8.6")
+    implementation("androidx.lifecycle:lifecycle-common-java8:2.8.6")
+
+    // Компонентны Room
+    implementation("androidx.room:room-runtime:2.6.1")
+
+    //noispection KaptUsageInsteadOfKsp
+    implementation("androidx.room:room-ktx:2.6.1")
 }

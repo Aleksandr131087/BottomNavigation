@@ -11,6 +11,7 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.bottomnavigation.databinding.ActivityMainBinding
+import com.example.bottomnavigation.databinding.FragmentWeatherBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
@@ -37,8 +38,8 @@ class MainActivity : AppCompatActivity() {
         }
 
         binding.startBTN.setOnClickListener {
-            startActivity(Intent(this, StartActivity::class.java))
-            finish()
+            startActivity(Intent(this@MainActivity, StartActivity::class.java))
+
         }
     }
 
